@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ -f /usr/local/bin/brew ]; then
+  /usr/local/bin/brew update && /usr/local/bin/brew upgrade --all
+fi
+
+if [ -f /usr/local/bin/boot2docker ]; then
+  boot2docker upgrade
+fi
+
+if [ -f /usr/local/bin/asepsisctl ]; then
+  /usr/local/bin/asepsisctl migratein
+fi
+
+if [ -f /usr/local/bin/composer ]; then
+  /usr/local/bin/composer self-update && /usr/local/bin/composer clear-cache
+fi

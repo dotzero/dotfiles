@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# gpg2 --export-secret-keys --armor mail@dotzero.ru > mail-dotzero-secret-gpg.key
+# gpg2 --export --armor mail@dotzero.ru > mail-dotzero-public-gpg.key
+# gpg2 --export-ownertrust > mail-dotzero-ownertrust-gpg.txt
+# bcrypt mail-dotzero-ownertrust-gpg.txt mail-dotzero-public-gpg.key mail-dotzero-secret-gpg.key
+
+HOME=${HOME:="/Users/dotzero"}
+ARCHIVE="$HOME/Dropbox/backup/`hostname`.`date +%F-%H%M`.tar.gz.gpg"
+TARGETS="
+$HOME/.ssh/
+$HOME/.gitconfig
+$HOME/.gitignore_global
+$HOME/dev/edu
+"
+
+tar -cvz $TARGETS | gpg --encrypt --recipient mail@dotzero.ru -o $ARCHIVE

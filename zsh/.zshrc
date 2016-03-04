@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.0/zsh
 ZSH_THEME="pure"
 DISABLE_AUTO_UPDATE="true"
-plugins=(brew composer cp docker fabric git rsync vagrant)
+plugins=(brew composer cp docker fabric git rsync vagrant golang)
 source $ZSH/oh-my-zsh.sh
 
 export TERM="xterm-256color"
@@ -16,7 +16,9 @@ export HISTCONTROL=ignoredups # Ignore duplicate commands in the history
 export HISTFILESIZE=10000 # Increase the maximum number of lines contained in the history file
 export HISTSIZE=10000 # Increase the maximum number of commands to remember
 
-export SSHHOME="$HOME/.0/conf/" # Path for sshrc
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/dev/golang
+export PATH=$PATH:$GOPATH/bin
 
 # Virtualenvwrapper
 #export WORKON_HOME="$HOME/.virtualenvs"

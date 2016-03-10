@@ -1,11 +1,11 @@
 #!/bin/bash
 
-if [ -f /usr/local/bin/brew ]; then
-  /usr/local/bin/brew update && /usr/local/bin/brew upgrade --all
+if [ -f ~/.0 ]; then
+  cd ~/.0 && git pull
 fi
 
-if [ -f /usr/local/bin/boot2docker ]; then
-  boot2docker upgrade
+if [ -f /usr/local/bin/brew ]; then
+  /usr/local/bin/brew update && /usr/local/bin/brew upgrade --all
 fi
 
 if [ -f /usr/local/bin/asepsisctl ]; then

@@ -186,3 +186,10 @@ function kill_image_capture {
 
     echo "Image Capture Extension - Killed."
 }
+
+# Set GOPATH to current directory
+function gopath {
+    local PWD=$(pwd)
+    export GOPATH=$PWD
+    echo "GOPATH set to $PWD"
+}

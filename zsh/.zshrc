@@ -184,6 +184,7 @@ function kill_image_capture {
       exit 1;
     fi
 
+    kill -9 $PID
     echo "Image Capture Extension - Killed."
 }
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -f ~/.0 ]; then
+if [ -d ~/.0 ]; then
   cd ~/.0 && git pull
 fi
 

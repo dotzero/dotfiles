@@ -21,8 +21,8 @@ export GOPATH=$HOME/dev/golang
 export PATH=$PATH:$GOPATH/bin
 
 # Virtualenvwrapper
-#export WORKON_HOME="$HOME/.virtualenvs"
-#source /usr/local/bin/virtualenvwrapper.sh
+export WORKON_HOME="$HOME/.virtualenvs"
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Allow aliases to be with sudo
 alias sudo="sudo "

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]; then
+  echo "$0 README.md > README.rst"
+  exit;
+fi
+
+filename=$(basename "$1")
+extension="${filename##*.}"
+
+curl \
+    --form from=markdown \
+    --form to=rst \
+    --form test_mode=true \
+    --form input_files[]=@$filename \
+    http://c.docverter.com/convert

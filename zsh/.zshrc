@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.0/zsh
 ZSH_THEME="pure"
 DISABLE_AUTO_UPDATE="true"
-plugins=(brew composer cp docker fabric git rsync vagrant golang)
+plugins=(brew composer cp docker fabric git rsync vagrant golang laravel5)
 source $ZSH/oh-my-zsh.sh
 
 export TERM="xterm-256color"

@@ -10,7 +10,10 @@ export TERM="xterm-256color"
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$HOME/.0/bin:$PATH"
 export PATH=$PATH:~/.composer/vendor/bin # Composer
 export PATH=$PATH:/usr/local/opt/go/libexec/bin # Go Compiler
+export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 export EDITOR="nano"
+
+export HOMEBREW_GITHUB_API_TOKEN="719599fab9c5ebfcc540c8a696b74b2d09f50e63"
 
 export HISTCONTROL=ignoredups # Ignore duplicate commands in the history
 export HISTFILESIZE=10000 # Increase the maximum number of lines contained in the history file

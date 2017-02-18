@@ -52,7 +52,7 @@ alias deadsym="find / -type l ! -exec test -r {} \; -print" # Find "dead" symbol
 alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -seed -r -f -v -domain local -domain user -domain system;echo "Open With has been rebuilt"'
 alias showdotfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder" # Show hidden files in Finder
 alias hidedotfiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder" # Hide hidden files in Finder
-alias rmds="sudo find / -name '.DS_Store' -depth -exec rm {} \;"
+alias rmds="find . -name '.DS_Store' -depth -exec rm {} \;"
 
 # Download web page with all assets
 alias getpage="wget --no-clobber --page-requisites --html-extension --convert-links --no-host-directories"
@@ -189,11 +189,4 @@ function kill_image_capture {
 
     kill -9 $PID
     echo "Image Capture Extension - Killed."
-}
-
-# Set GOPATH to current directory
-function gopath {
-    local PWD=$(pwd)
-    export GOPATH=$PWD
-    echo "GOPATH set to $PWD"
 }

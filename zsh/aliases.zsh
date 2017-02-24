@@ -20,6 +20,7 @@ alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Framew
 alias showdotfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder" # Show hidden files in Finder
 alias hidedotfiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder" # Hide hidden files in Finder
 alias rmds="find . -name '.DS_Store' -depth -exec rm {} \;"
+alias chrome="open -a Google\ Chrome"
 
 # Vagrant
 alias vagup="vagrant up"

@@ -5,11 +5,13 @@ if [ -d ~/.0 ]; then
 fi
 
 if [ -f /usr/local/bin/brew ]; then
-  /usr/local/bin/brew update && /usr/local/bin/brew upgrade --cleanup
+  /usr/local/bin/brew update
+  /usr/local/bin/brew upgrade --cleanup
 fi
 
 if [ -f /usr/local/bin/composer ]; then
-  /usr/local/bin/composer self-update && /usr/local/bin/composer clear-cache
+  /usr/local/bin/composer self-update
+  /usr/local/bin/composer clear-cache
 fi
 
 if [ -f /usr/local/bin/apm ]; then

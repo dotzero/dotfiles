@@ -1,19 +1,37 @@
 #!/bin/bash
 
+function header() {
+	echo "$(tput sgr 0 1)$(tput setaf 6)$1$(tput sgr0)"
+}
+
 if [ -d ~/.0 ]; then
-  cd ~/.0 && git pull
+  header "Updating dotfiles..."
+  pushd ~/.0
+  git pull
+  popd
+  echo
 fi
 
 if [ -f /usr/local/bin/brew ]; then
+  header "Updating Homebrew..."
   /usr/local/bin/brew update
-  /usr/local/bin/brew upgrade --cleanup
+  /usr/local/bin/brew upgrade
+  /usr/local/bin/brew cleanup
+  /usr/local/bin/brew prune
+  echo
 fi
 
 if [ -f /usr/local/bin/composer ]; then
+  header "Updating Composer..."
   /usr/local/bin/composer self-update
   /usr/local/bin/composer clear-cache
+  echo
 fi
 
 if [ -f /usr/local/bin/apm ]; then
+  header "Updating Atom..."
   /usr/local/bin/apm update -c=0
+  echo
 fi
+
+nyan

@@ -34,4 +34,4 @@ if [ -f /usr/local/bin/apm ]; then
   echo
 fi
 
-nyan
+nyan -alt

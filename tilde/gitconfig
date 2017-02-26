@@ -8,7 +8,7 @@
     safecrlf = true
     editor = subl -w
     pager = less -R
-    excludesfile = /Users/dotzero/.gitignore_global
+    excludesfile = ~/.gitignore_global
 
 [apply]
     whitespace = nowarn

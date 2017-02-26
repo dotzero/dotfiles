@@ -1,6 +1,7 @@
 # Aliases
 alias ..="cd .."
 alias ...="cd ../.."
+alias dt="cd ~/Desktop"
 alias dn="cd ~/Downloads"
 
 alias ls="ls -G"

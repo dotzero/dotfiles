@@ -1,3 +1,4 @@
+--ignore-dir=.idea
 --type-add=css=.sass,.less,.scss
 --type-add=html=.twig,.tpl
 --smart-case

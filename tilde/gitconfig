@@ -1,6 +1,7 @@
 [user]
     name = dotzero
     email = mail@dotzero.ru
+    signingkey = AAE042B1
 
 [core]
     autocrlf = input
@@ -59,3 +60,6 @@
     type = cat-file -t
     dump = cat-file -p
     ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+
+[push]
+  default = simple

@@ -10,22 +10,30 @@
     pager = less -R
     excludesfile = ~/.gitignore_global
 
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+
+    # Amend the currently staged files to the latest commit
+  	amend = commit --amend --reuse-message=HEAD
+
+    # Switch to a branch, creating it if necessary
+  	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+
+    # Show verbose output about tags, branches or remotes
+  	tags = tag -l
+  	branches = branch -a
+  	remotes = remote -v
+
+    # Remove the old tag with this name and tag the latest commit with it.
+    retag = "!r() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; r"
+
 [apply]
     whitespace = nowarn
-
-[diff]
-    tool = sourcetree
-
-[merge]
-    tool = sourcetree
-
-[difftool "sourcetree"]
-    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-    path =
-
-[mergetool "sourcetree"]
-    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-    trustExitCode = true
 
 [color]
     ui = true
@@ -33,33 +41,59 @@
     status = true
     branch = true
 
-    [color "branch"]
-        current = yellow reverse
-        local = yellow
-        remote = green
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
 
-    [color "diff"]
-        meta = normal
-        frag = magenta bold
-        old = red bold
-        new = blue bold
-        whitespace = red reverse
+[color "diff"]
+    meta = normal
+    frag = magenta bold
+    old = red bold
+    new = blue bold
+    whitespace = red reverse
 
-    [color "status"]
-        added = yellow
-        changed = green
-        untracked = cyan
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
 
-[alias]
-    co = checkout
-    ci = commit
-    st = status
-    br = branch
-    unadd = reset HEAD --
-    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-    type = cat-file -t
-    dump = cat-file -p
-    ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+[commit]
+    # https://help.github.com/articles/signing-commits-using-gpg/
+  	# gpgsign = true
+
+[diff]
+    tool = sourcetree
+
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path =
+
+[help]
+  	autocorrect = 1
+
+[merge]
+    tool = sourcetree
+
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
 
 [push]
-  default = simple
+    default = simple
+
+[url "git@github.com:"]
+    insteadOf = "gh:"
+    pushInsteadOf = "github:"
+    pushInsteadOf = "git://github.com/"
+
+[url "git://github.com/"]
+    insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+    insteadOf = "gst:"
+    pushInsteadOf = "gist:"
+    pushInsteadOf = "git://gist.github.com/"
+
+[url "git://gist.github.com/"]
+    insteadOf = "gist:"

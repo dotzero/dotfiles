@@ -1,6 +1,9 @@
 [distutils]
-index-servers =
-    pypi
+index-servers=pypi
 
 [pypi]
-username:dotzero
+repository = https://pypi.python.org/pypi
+username = dotzero
+
+[bdist_wheel]
+universal = 1

@@ -1,5 +1,5 @@
-#!/bin/sh
-#
+#!/usr/bin/env bash
+
 # Usage: atom-package-install
 #
 # Installs the atom packages listed in your packages.txt file

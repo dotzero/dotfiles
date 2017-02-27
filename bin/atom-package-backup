@@ -1,5 +1,5 @@
-#!/bin/sh
-#
+#!/usr/bin/env bash
+
 # Usage: atom-package-backup
 #
 # Saves a list of your currently installed atom packages to

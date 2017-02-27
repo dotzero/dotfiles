@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+# Usage: brew-backup > ~/.0/backup/brew.packages.sh
+#
+# Saves a list of your currently installed homebrew packages to
+# ~/.0/backup/brew.packages.sh
+
+set -e
+
+BREW_COMMAND="$(which brew)"
+CASK_COMMAND="$BREW_COMMAND cask"
+
+echo '#!/usr/bin/env bash'
+echo ''
+echo 'trap ctrl_c INT'
+echo 'function ctrl_c() {'
+echo '  echo "** Trapped CTRL-C"'
+echo '  exit 1'
+echo '}'
+echo ''
+echo 'BREW_COMMAND="$(which brew)"'
+echo 'CASK_COMMAND="$BREW_COMMAND cask"'
+echo 'FAILED_ITEMS=""'
+echo ''
+echo 'function install_package() {'
+echo '  echo EXECUTING: brew install $1 $2'
+echo '  $BREW_COMMAND install $1 $2'
+echo '  [ $? -ne 0 ] && $FAILED_ITEMS="$FAILED_ITEMS $1"  # package failed to install.'
+echo '}'
+echo ''
+echo 'function install_cask_package() {'
+echo '  echo EXECUTING: brew cask install $1'
+echo '  $CASK_COMMAND install $1'
+echo '  [ $? -ne 0 ] && $FAILED_ITEMS="$FAILED_ITEMS $1"  # package failed to install.'
+echo '}'
+echo ''
+
+$BREW_COMMAND tap 2>/dev/null | while read tap; do
+  echo "$BREW_COMMAND tap $tap";
+done
+
+$BREW_COMMAND list 2>/dev/null | while read item; do
+  echo "install_package $item '$($BREW_COMMAND info $item | /usr/bin/grep 'Built from source with:' | /usr/bin/sed 's/^[ \t]*Built from source with:/ /g; s/\,/ /g')'"
+done
+
+$CASK_COMMAND list 2>/dev/null | while read item; do
+  echo "install_cask_package $item"
+done
+
+echo '[ ! -z $FAILED_ITEMS ] && echo The following items were failed to install: && echo $FAILED_ITEMS'

@@ -5,7 +5,7 @@
 # Usage:
 #   crlf [file] [--force]
 
-local force=
+force=0
 
 function _crlf_file() {
   grep -q $'\x0D' "$1" && echo "$1" && [ $2 ] && dos2unix "$1"

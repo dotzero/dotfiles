@@ -4,6 +4,16 @@ function header() {
 	echo "$(tput sgr 0 1)$(tput setaf 6)$1$(tput sgr0)"
 }
 
+# macOS
+header "Updating macOS..."
+sudo softwareupdate -i -a
+echo
+
+# git-friendly
+header "Updating git-friendly..."
+sudo bash < <( curl https://raw.githubusercontent.com/jamiew/git-friendly/master/install.sh)
+echo
+
 if [ -d ~/.0 ]; then
   header "Updating dotfiles..."
   pushd ~/.0

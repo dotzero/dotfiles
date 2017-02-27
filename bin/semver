@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 # Sekati: Semantic Version String Manipulator
 # @author jason m horwitz | sekati.com
 # Copyright (C) 2012 jason m horwitz, Sekat LLC. All Rights Reserved.

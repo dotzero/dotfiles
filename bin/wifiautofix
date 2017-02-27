@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 # https://github.com/bolknote/shellgames/blob/master/wifiautofix.sh
 
 wifi=$(networksetup -listallhardwareports | fgrep Wi-Fi -A1 | awk 'NF==2{print $2}')

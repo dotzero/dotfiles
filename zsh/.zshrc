@@ -45,5 +45,8 @@ if [ -d $ZROOT/bin ]; then
   _prepend_path "$GOPATH/bin"
 fi
 
+# Add all known keys to the SSH agent
+ssh-add -A 2>/dev/null;
+
 # Load extra (private) settings
 [ -f ~/.zshlocal ] && source ~/.zshlocal

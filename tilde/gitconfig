@@ -13,7 +13,7 @@
 [alias]
     co = checkout
     ci = commit
-    st = status
+    st = status -sb
     br = branch
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
@@ -97,3 +97,10 @@
 
 [url "git://gist.github.com/"]
     insteadOf = "gist:"
+
+# Include local settings
+# git config -f ~/.gitlocal user.email "mail@dotzero.ru"
+# git config -f ~/.gitlocal user.name "mail@dotzero.ru"
+# git config -f ~/.gitlocal user.signingkey "AAE042B1"
+[include]
+    path = ~/.gitlocal

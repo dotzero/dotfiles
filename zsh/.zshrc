@@ -15,6 +15,8 @@ function _prepend_path() {
 
 # Exports
 # ---------------------------------------
+export LC_ALL=ru_RU.UTF-8
+export LANG="ru_RU"
 PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 [ -d $ZROOT/bin ] && _prepend_path "$ZROOT/bin"
 [ -d $HOME/.composer/vendor/bin ] && _prepend_path "$HOME/.composer/vendor/bin"
@@ -26,10 +28,6 @@ export EDITOR="nano"
 export HISTCONTROL="ignoredups" # Ignore duplicate commands in the history
 export HISTFILESIZE=10000 # Increase the maximum number of lines contained in the history file
 export HISTSIZE=10000 # Increase the maximum number of commands to remember
-
-# Homebrew
-# ---------------------------------------
-export HOMEBREW_GITHUB_API_TOKEN="719599fab9c5ebfcc540c8a696b74b2d09f50e63"
 
 # Virtualenvwrapper
 # ---------------------------------------
@@ -46,3 +44,6 @@ if [ -d $ZROOT/bin ]; then
   export GOPATH="$HOME/go"
   _prepend_path "$GOPATH/bin"
 fi
+
+# Load extra (private) settings
+[ -f ~/.zshlocal ] && source ~/.zshlocal

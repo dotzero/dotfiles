@@ -22,6 +22,7 @@ alias showdotfiles="defaults write com.apple.finder AppleShowAllFiles -bool true
 alias hidedotfiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder" # Hide hidden files in Finder
 alias rmds="find . -name '.DS_Store' -depth -exec rm {} \;"
 alias chrome="open -a Google\ Chrome"
+alias map="xargs -n1"
 
 # Vagrant
 alias vagup="vagrant up"

@@ -17,6 +17,29 @@ function cdf {
   fi
 }
 
+# Run `dig` and display the most useful info
+function digga() {
+	dig +nocmd "$1" any +multiline +noall +answer;
+}
+
+# UTF-8-encode a string of Unicode symbols
+function escape() {
+	printf "\\\x%s" $(printf "$@" | xxd -p -c1 -u);
+	# print a newline unless we’re piping the output to another program
+	if [ -t 1 ]; then
+		echo ""; # newline
+	fi;
+}
+
+# Decode \x{ABCD}-style Unicode escape sequences
+function unidecode() {
+	perl -e "binmode(STDOUT, ':utf8'); print \"$@\"";
+	# print a newline unless we’re piping the output to another program
+	if [ -t 1 ]; then
+		echo ""; # newline
+	fi;
+}
+
 # Start an Python HTTP server from a directory, optionally specifying the port
 function pyserver {
   # Get port (if specified)
@@ -45,6 +68,26 @@ function phpserver {
 
   # Run built-in web server
   php -S "localhost:${port}"
+}
+
+# `s` with no arguments opens the current directory in Sublime Text, otherwise
+# opens the given location
+function s() {
+	if [ $# -eq 0 ]; then
+		subl .;
+	else
+		subl "$@";
+	fi;
+}
+
+# `a` with no arguments opens the current directory in Atom Editor, otherwise
+# opens the given location
+function a() {
+	if [ $# -eq 0 ]; then
+		atom .;
+	else
+		atom "$@";
+	fi;
 }
 
 # animated gifs from any video

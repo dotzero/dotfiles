@@ -8,9 +8,9 @@ ZROOT=$HOME/.0
 
 # Prepend $PATH without duplicates
 function _prepend_path() {
-	if ! $( echo "$PATH" | tr ":" "\n" | grep -qx "$1" ) ; then
-		PATH="$1:$PATH"
-	fi
+  if ! $( echo "$PATH" | tr ":" "\n" | grep -qx "$1" ) ; then
+    PATH="$1:$PATH"
+  fi
 }
 
 # Exports
@@ -32,9 +32,9 @@ export HISTSIZE=10000 # Increase the maximum number of commands to remember
 # Virtualenvwrapper
 # ---------------------------------------
 if [ -f /usr/local/bin/virtualenvwrapper_lazy.sh ]; then
-	export WORKON_HOME="$HOME/.virtualenvs"
-	export VIRTUALENVWRAPPER_SCRIPT="/usr/local/bin/virtualenvwrapper.sh"
-	source /usr/local/bin/virtualenvwrapper_lazy.sh
+  export WORKON_HOME="$HOME/.virtualenvs"
+  export VIRTUALENVWRAPPER_SCRIPT="/usr/local/bin/virtualenvwrapper.sh"
+  source /usr/local/bin/virtualenvwrapper_lazy.sh
 fi
 
 # Golang

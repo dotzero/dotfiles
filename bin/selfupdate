@@ -4,6 +4,10 @@ function header() {
 	echo "$(tput sgr 0 1)$(tput setaf 6)$1$(tput sgr0)"
 }
 
+# Ask for the administrator password upfront
+sudo -v
+echo
+
 # macOS
 header "Updating macOS..."
 sudo softwareupdate -i -a
@@ -14,20 +18,24 @@ header "Updating git-friendly..."
 sudo bash < <( curl https://raw.githubusercontent.com/jamiew/git-friendly/master/install.sh)
 echo
 
+if [ -f ~/.oh-my-zsh/tools/upgrade.sh ]; then
+	env ZSH=~/.oh-my-zsh sh ~/.oh-my-zsh/tools/upgrade.sh
+	echo
+fi
+
 if [ -d ~/.0 ]; then
   header "Updating dotfiles..."
   pushd ~/.0
   git pull
 	python sync.py
-	source "$HOME/.zshrc"
   popd
   echo
 fi
 
 if [ -f /usr/local/bin/npm ]; then
   header "Updating npm..."
-	sudo npm install -g npm@latest
-	sudo npm update -g
+	sudo /usr/local/bin/npm install -g npm@latest
+	sudo /usr/local/bin/npm update -g
   echo
 fi
 

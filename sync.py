@@ -2,7 +2,7 @@
 
 """
 Dotfiles syncronization.
-Makes symlinks for all files: ~/dotfiles/tilde/bashrc.bash => ~/.bashrc.
+Makes symlinks for all files: ~/.0/tilde/zshrc => ~/.zshrc
 Based on https://gist.github.com/490016
 """
 

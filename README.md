@@ -1,19 +1,20 @@
 # dotzero dotfiles
 
-## Installation
+## First
 
-1. [Install Xcode Command Line Tools](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/).
-2. [Generate SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
-3. [Install Homebrew](https://brew.sh/).
-4. [Install ZSH](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH).
+1. [Install iTerm2](https://www.iterm2.com/)
+2. `xcode-select --install`
+3. [Generate SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
+4. [Install Homebrew](https://brew.sh/).
 5. [Install Oh My Zsh](http://ohmyz.sh/).
 
-Then run these commands in the terminal:
+## Second
 
 ```bash
-brew install git
 git clone git@github.com:dotzero/dotfiles.git ~/.0
 cd ~/.0
+brew tap homebrew/bundle
+brew bundle -v
 python sync.py
 bash .macos
 ```

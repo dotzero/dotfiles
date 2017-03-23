@@ -20,7 +20,7 @@ export LANG="ru_RU"
 PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 [ -d $ZROOT/bin ] && _prepend_path "$ZROOT/bin"
 [ -d $HOME/.composer/vendor/bin ] && _prepend_path "$HOME/.composer/vendor/bin"
-[ -d /usr/local/opt/php56/bin ] && _prepend_path "/usr/local/opt/php56/bin"
+[ -d /usr/local/opt/php70/bin ] && _prepend_path "/usr/local/opt/php70/bin"
 [ -d /usr/local/opt/go/libexec/bin ] && _prepend_path "/usr/local/opt/go/libexec/bin"
 export PATH
 export TERM="xterm-256color"

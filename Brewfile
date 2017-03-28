@@ -22,6 +22,7 @@ brew 'homebrew/php/php70-yaml'
 brew 'httpie'
 brew 'hugo'
 brew 'jq'
+brew 'mas'
 brew 'mcrypt'
 brew 'memcached'
 brew 'mongodb', restart_service: true
@@ -34,3 +35,6 @@ brew 'sqlite'
 brew 'wget'
 brew 'xz'
 brew 'youtube-dl'
+mas 'Telegram', id: 747648890
+mas 'MonthlyCal', id: 935250717
+mas 'Slack', id: 803453959

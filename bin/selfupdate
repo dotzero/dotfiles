@@ -9,13 +9,13 @@ sudo -v
 echo
 
 # macOS
-header "Updating macOS..."
-sudo softwareupdate -i -a
-echo
+# header "Updating macOS..."
+# sudo softwareupdate -i -a
+# echo
 
 # git-friendly
 header "Updating git-friendly..."
-sudo bash < <( curl https://raw.githubusercontent.com/jamiew/git-friendly/master/install.sh)
+sudo bash < <( curl -s https://raw.githubusercontent.com/jamiew/git-friendly/master/install.sh )
 echo
 
 if [ -f ~/.oh-my-zsh/tools/upgrade.sh ]; then

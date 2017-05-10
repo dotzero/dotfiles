@@ -33,6 +33,7 @@ export HISTSIZE=10000 # Increase the maximum number of commands to remember
 # ---------------------------------------
 if [ -f /usr/local/bin/virtualenvwrapper_lazy.sh ]; then
   export WORKON_HOME="$HOME/.virtualenvs"
+  export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
   export VIRTUALENVWRAPPER_SCRIPT="/usr/local/bin/virtualenvwrapper.sh"
   source /usr/local/bin/virtualenvwrapper_lazy.sh
 fi

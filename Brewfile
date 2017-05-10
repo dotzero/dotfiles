@@ -32,6 +32,7 @@ brew 'python3'
 brew 'redis', restart_service: true
 brew 'scrypt'
 brew 'sqlite'
+brew 'ttyrec'
 brew 'wget'
 brew 'xz'
 brew 'youtube-dl'

@@ -34,8 +34,8 @@ fi
 
 if [ -f /usr/local/bin/npm ]; then
   header "Updating npm..."
-	sudo /usr/local/bin/npm install -g npm@latest
-	sudo /usr/local/bin/npm update -g
+	/usr/local/bin/npm install -g npm@latest
+	/usr/local/bin/npm update -g
   echo
 fi
 

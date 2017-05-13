@@ -1,0 +1,7 @@
+PeterJausovec.vscode-docker
+donjayamanne.python
+file-icons.file-icons
+formulahendry.auto-close-tag
+lukehoban.Go
+spywhere.whiteviz
+zhuangtongfa.Material-theme

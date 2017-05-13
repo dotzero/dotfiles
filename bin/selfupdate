@@ -32,13 +32,6 @@ if [ -d ~/.0 ]; then
   echo
 fi
 
-if [ -f /usr/local/bin/npm ]; then
-  header "Updating npm..."
-	/usr/local/bin/npm install -g npm@latest
-	/usr/local/bin/npm update -g
-  echo
-fi
-
 if [ -f /usr/local/bin/apm ]; then
   header "Updating Atom..."
   /usr/local/bin/apm update -c=0

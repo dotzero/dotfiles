@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Usage: code-package-backup
+#
+# Saves a list of your currently installed vs code packages to
+# ~/.0/backup/code.packages.txt suitable for install
+# via code-package-install
+
+set -e
+
+code --list-extensions > ~/.0/backup/code.packages.txt

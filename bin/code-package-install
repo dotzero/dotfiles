@@ -10,4 +10,4 @@
 
 set -e
 
-cat ~/.0/backup/codeatom.packages.txt | xargs -L1 code --install-extension
+cat ~/.0/backup/code.packages.txt | xargs -L1 code --install-extension

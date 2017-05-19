@@ -46,6 +46,10 @@ cask 'mac2imgur'
 cask 'macdown'
 cask 'minikube'
 mas 'MonthlyCal', id: 935250717
+mas 'Simplenote', id: 692867256
 mas 'Slack', id: 803453959
 mas 'Telegram', id: 747648890
+mas 'The Unarchiver', id: 425424353
+mas 'Things3', id: 904280696
 mas 'Tweetbot', id: 557168941
+mas 'Xcode', id: 497799835

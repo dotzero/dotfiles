@@ -1,7 +1,10 @@
+EditorConfig.EditorConfig
 PeterJausovec.vscode-docker
 donjayamanne.python
 file-icons.file-icons
 formulahendry.auto-close-tag
+lonefy.vscode-JS-CSS-HTML-formatter
 lukehoban.Go
+shanoor.vscode-nginx
 spywhere.whiteviz
 zhuangtongfa.Material-theme

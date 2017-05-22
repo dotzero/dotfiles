@@ -17,6 +17,7 @@ brew 'httpie'
 brew 'hugo'
 brew 'jq'
 brew 'kubernetes-cli'
+brew 'kubernetes-helm'
 brew 'mas'
 brew 'mcrypt'
 brew 'memcached'
@@ -45,6 +46,7 @@ brew 'homebrew/php/php70-yaml'
 cask 'mac2imgur'
 cask 'macdown'
 cask 'minikube'
+cask 'java'
 mas 'MonthlyCal', id: 935250717
 mas 'Simplenote', id: 692867256
 mas 'Slack', id: 803453959

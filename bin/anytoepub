@@ -27,7 +27,7 @@ function convert_file() {
 	local intype=${infile##*.}
 	local intype=$(echo $intype | tr '[:upper:]' '[:lower:]')
 	local infilename=$(basename "$1")
-	local outfilename="${infilename%.*}.mobi"
+	local outfilename="${infilename%.*}.epub"
 
 	if [[ "$intype" == "pdf" ]]; then
 		# Just copy PDF files to destination directory
@@ -36,10 +36,9 @@ function convert_file() {
 		fi
 		return
 	else
-		# Convert any other format (MOBI too) to old MOBI format to force left text alignment
-		ebook-convert "$infile" "$outdir/$outfilename" --output-profile=kindle_pw --mobi-file-type=old \
-			--mobi-ignore-margins --mobi-keep-original-images --no-inline-toc --remove-paragraph-spacing \
-			--change-justification=left --keep-ligatures --smarten-punctuation --pretty-print --filter-css=color
+		ebook-convert "$infile" "$outdir/$outfilename" --output-profile=ipad  \
+			--remove-paragraph-spacing --change-justification=left \
+            --keep-ligatures --smarten-punctuation --pretty-print --filter-css=color
 	fi
 
 	echo

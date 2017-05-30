@@ -20,7 +20,7 @@ alias deadsym="find / -type l ! -exec test -r {} \; -print" # Find "dead" symbol
 alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -seed -r -f -v -domain local -domain user -domain system;echo "Open With has been rebuilt"'
 alias showdotfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder" # Show hidden files in Finder
 alias hidedotfiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder" # Hide hidden files in Finder
-alias rmds="find . -name '.DS_Store' -depth -exec rm {} \;"
+alias rmds="find . -name '.DS_Store' -depth -exec rm -v {} \;"
 alias chrome="open -a Google\ Chrome"
 alias map="xargs -n1"
 

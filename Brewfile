@@ -42,7 +42,6 @@ brew 'homebrew/php/php70-xdebug'
 brew 'homebrew/php/php70-yaml'
 cask 'mac2imgur'
 cask 'macdown'
-cask 'minikube'
 cask 'java'
 mas 'MonthlyCal', id: 935250717
 mas 'Simplenote', id: 692867256

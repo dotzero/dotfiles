@@ -6,6 +6,7 @@ tap 'caskroom/cask'
 tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/php'
+tap 'homebrew/science'
 tap 'homebrew/services'
 brew 'ack'
 brew 'bcrypt'
@@ -40,9 +41,18 @@ brew 'homebrew/php/php70-mongodb'
 brew 'homebrew/php/php70-redis'
 brew 'homebrew/php/php70-xdebug'
 brew 'homebrew/php/php70-yaml'
+cask 'appcleaner'
+cask 'dripcap'
+cask 'handbrake'
+cask 'imageoptim'
+cask 'java'
+cask 'keybase'
 cask 'mac2imgur'
 cask 'macdown'
-cask 'java'
+cask 'numi'
+cask 'transmission'
+cask 'vlc'
+mas 'Microsoft OneNote', id: 784801555
 mas 'MonthlyCal', id: 935250717
 mas 'Simplenote', id: 692867256
 mas 'Slack', id: 803453959
@@ -51,3 +61,4 @@ mas 'The Unarchiver', id: 425424353
 mas 'Things3', id: 904280696
 mas 'Tweetbot', id: 557168941
 mas 'Xcode', id: 497799835
+mas 'Yandex.Disk', id: 560459030

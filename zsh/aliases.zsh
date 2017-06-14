@@ -24,10 +24,6 @@ alias rmds="find . -name '.DS_Store' -depth -exec rm -v {} \;"
 alias chrome="open -a Google\ Chrome"
 alias map="xargs -n1"
 
-# VS Code
-# https://code.visualstudio.com/updates/v1_12#_macos-blurry-icons
-alias code="LC_ALL= code"
-
 # Docker
 alias phpstan='docker run -v $PWD:/app --rm phpstan/phpstan' # docker pull phpstan/phpstan
 

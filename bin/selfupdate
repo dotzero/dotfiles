@@ -32,12 +32,6 @@ if [ -d ~/.0 ]; then
   echo
 fi
 
-if [ -f /usr/local/bin/apm ]; then
-  header "Updating Atom..."
-  /usr/local/bin/apm update -c=0
-  echo
-fi
-
 if [ -f /usr/local/bin/composer ]; then
   header "Updating Composer..."
   /usr/local/bin/composer self-update

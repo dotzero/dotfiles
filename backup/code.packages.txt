@@ -5,6 +5,8 @@ file-icons.file-icons
 formulahendry.auto-close-tag
 lonefy.vscode-JS-CSS-HTML-formatter
 lukehoban.Go
+ms-vscode.csharp
 shanoor.vscode-nginx
 spywhere.whiteviz
+whatwedo.twig
 zhuangtongfa.Material-theme

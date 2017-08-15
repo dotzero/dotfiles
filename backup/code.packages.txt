@@ -1,5 +1,6 @@
 EditorConfig.EditorConfig
 PeterJausovec.vscode-docker
+bierner.markdown-preview-github-styles
 donjayamanne.python
 file-icons.file-icons
 formulahendry.auto-close-tag

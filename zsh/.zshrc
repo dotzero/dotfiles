@@ -24,7 +24,7 @@ PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 [ -d /usr/local/opt/go/libexec/bin ] && _prepend_path "/usr/local/opt/go/libexec/bin"
 export PATH
 export TERM="xterm-256color"
-export EDITOR="nano"
+export EDITOR="micro"
 export HISTCONTROL="ignoredups" # Ignore duplicate commands in the history
 export HISTFILESIZE=10000 # Increase the maximum number of lines contained in the history file
 export HISTSIZE=10000 # Increase the maximum number of commands to remember

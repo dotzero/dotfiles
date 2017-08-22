@@ -1,0 +1,24 @@
+{
+  "profiles": {
+    "home": [
+      {
+        "key": "user.name",
+        "value": "dotzero"
+      },
+      {
+        "key": "user.email",
+        "value": "mail@dotzero.ru"
+      }
+    ],
+    "work": [
+      {
+        "key": "user.name",
+        "value": "Aleksandr Smagin"
+      },
+      {
+        "key": "user.email",
+        "value": "amsmagin@avito.ru"
+      }
+    ]
+  }
+}

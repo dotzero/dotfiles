@@ -32,6 +32,7 @@ brew 'jq'
 brew 'mas'
 brew 'mcrypt'
 brew 'memcached'
+brew 'micro'
 brew 'mongodb', restart_service: true
 brew 'nmap'
 brew 'node'

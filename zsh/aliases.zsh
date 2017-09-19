@@ -27,10 +27,6 @@ alias map="xargs -n1"
 # Docker
 alias phpstan='docker run -v $PWD:/app --rm phpstan/phpstan' # docker pull phpstan/phpstan
 
-# Vagrant
-alias vagup="vagrant up"
-alias vaghalt="vagrant halt"
-
 # Other tools
 alias dos2unix="perl -pi -e 's/\r\n/\n/g'"
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'

@@ -6,8 +6,10 @@ file-icons.file-icons
 formulahendry.auto-close-tag
 lonefy.vscode-JS-CSS-HTML-formatter
 lukehoban.Go
+ms-vscode.azure-account
 ms-vscode.csharp
 shanoor.vscode-nginx
+shd101wyy.markdown-preview-enhanced
 spywhere.whiteviz
 whatwedo.twig
 zhuangtongfa.Material-theme

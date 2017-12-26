@@ -10,6 +10,7 @@ tap 'homebrew/science'
 tap 'homebrew/services'
 brew 'ack'
 brew 'bcrypt'
+brew 'bx'
 brew 'ctop'
 brew 'dep'
 brew 'dnsmasq', restart_service: true

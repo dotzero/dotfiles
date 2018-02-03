@@ -1,13 +1,10 @@
 EditorConfig.EditorConfig
+JuanBlanco.solidity
 PeterJausovec.vscode-docker
-bierner.markdown-preview-github-styles
-donjayamanne.python
 file-icons.file-icons
 formulahendry.auto-close-tag
-lonefy.vscode-JS-CSS-HTML-formatter
 lukehoban.Go
-ms-vscode.azure-account
-ms-vscode.csharp
+ms-python.python
 shanoor.vscode-nginx
 shd101wyy.markdown-preview-enhanced
 spywhere.whiteviz

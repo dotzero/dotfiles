@@ -2,23 +2,28 @@
 # 1. brew tap homebrew/bundle
 # 2. brew bundle -v
 
-tap 'caskroom/cask'
-tap 'homebrew/bundle'
+tap 'homebrew/science'
 tap 'homebrew/core'
 tap 'homebrew/php'
-tap 'homebrew/science'
+tap 'homebrew/bundle'
 tap 'homebrew/services'
+tap 'caskroom/cask'
+tap 'ethereum/ethereum'
+tap 'dotzero/tap'
 brew 'ack'
 brew 'bcrypt'
 brew 'bx'
 brew 'ctop'
 brew 'dep'
 brew 'dnsmasq', restart_service: true
+brew 'dotzero/tap/git-profile'
+brew 'ethereum/ethereum/ethereum'
+brew 'ethereum/ethereum/solidity'
 brew 'git'
 brew 'gnupg'
 brew 'go'
-brew 'homebrew/php/php71'
-brew 'homebrew/php/php71-igbinary'
+brew 'homebrew/php/igbinary'
+brew 'homebrew/php/php71', args: ['with-imap']
 brew 'homebrew/php/php71-imagick'
 brew 'homebrew/php/php71-intl'
 brew 'homebrew/php/php71-mcrypt'

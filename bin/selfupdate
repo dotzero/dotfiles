@@ -48,4 +48,6 @@ if [ -f /usr/local/bin/brew ]; then
   echo
 fi
 
+python -m pip install --upgrade pip setuptools requests virtualenv virtualenvwrapper
+
 nyan -alt

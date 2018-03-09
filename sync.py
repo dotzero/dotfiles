@@ -44,13 +44,13 @@ def main():
 
             response = raw_input("Overwrite file `%s'? [y/N] " % dotfile)
             if not response.lower().startswith('y'):
-                print "Skipping `%s'..." % dotfile
+                print("Skipping `%s`..." % dotfile)
                 continue
 
             force_remove(dotfile)
 
         os.symlink(source, dotfile)
-        print "%s => %s" % (dotfile, source)
+        print("%s => %s" % (dotfile, source))
 
 
 if __name__ == '__main__':

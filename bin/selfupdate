@@ -8,11 +8,6 @@ function header() {
 sudo -v
 echo
 
-# macOS
-# header "Updating macOS..."
-# sudo softwareupdate -i -a
-# echo
-
 # git-friendly
 header "Updating git-friendly..."
 sudo bash < <( curl -s https://raw.githubusercontent.com/jamiew/git-friendly/master/install.sh )
@@ -27,7 +22,7 @@ if [ -d ~/.0 ]; then
   header "Updating dotfiles..."
   pushd ~/.0
   git pull
-	python sync.py
+  python sync.py
   popd
   echo
 fi
@@ -48,6 +43,16 @@ if [ -f /usr/local/bin/brew ]; then
   echo
 fi
 
-python -m pip install --upgrade pip setuptools requests virtualenv virtualenvwrapper
+if [ -f /usr/bin/python2.7 ]; then
+  header "Updating python 2.x modules..."
+  sudo /usr/bin/python2.7 -m pip install --upgrade pip setuptools requests virtualenv virtualenvwrapper
+  echo
+fi
+
+if [ -f /usr/local/bin/python3 ]; then
+  header "Updating python 3.x modules..."
+  /usr/local/bin/python3 -m pip install --upgrade pip setuptools requests virtualenv virtualenvwrapper
+  echo
+fi
 
 nyan -alt

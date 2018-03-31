@@ -43,15 +43,9 @@ if [ -f /usr/local/bin/brew ]; then
   echo
 fi
 
-if [ -f /usr/bin/python2.7 ]; then
-  header "Updating python 2.x modules..."
-  sudo /usr/bin/python2.7 -m pip install --upgrade pip setuptools requests virtualenv virtualenvwrapper
-  echo
-fi
-
 if [ -f /usr/local/bin/python3 ]; then
   header "Updating python 3.x modules..."
-  /usr/local/bin/python3 -m pip install --upgrade pip setuptools requests virtualenv virtualenvwrapper
+  /usr/local/bin/python3 -m pip install --upgrade pip setuptools wheel requests virtualenv virtualenvwrapper
   echo
 fi
 

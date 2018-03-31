@@ -1,0 +1,16 @@
+asn1crypto==0.24.0
+certifi==2018.1.18
+cffi==1.11.5
+chardet==3.0.4
+cryptography==2.2.2
+idna==2.6
+pbr==4.0.0
+pycparser==2.18
+pyOpenSSL==17.5.0
+requests==2.18.4
+six==1.11.0
+stevedore==1.28.0
+urllib3==1.22
+virtualenv==15.2.0
+virtualenv-clone==0.3.0
+virtualenvwrapper==4.8.2

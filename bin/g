@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 # Quick grep: ag, ack or grep
-# 
+#
 # Usage:
 #   g match
-#   
+#
 # Usage with ag:
 #   g txt+md match
 #   g -s match
 #   g php -s match
-#   
+#
 #   -s -- case sensitive
 #
 # Author: Artem Sapegin, sapegin.me
@@ -17,7 +17,9 @@
 # https://github.com/sapegin/dotfiles
 #
 
-if command -v ag >/dev/null 2>&1; then
+if command -v rg >/dev/null 2>&1; then
+    rg -i "$@"
+elif command -v ag >/dev/null 2>&1; then
 	function _g() {
 		ag --ignore-case --color-line-number='0;36' --color-match='0;35;4' --color-path='1;37' "$@"
 	}

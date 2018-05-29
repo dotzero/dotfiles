@@ -37,6 +37,7 @@ brew 'php@7.1'
 brew 'pv'
 brew 'python3'
 brew 'redis', restart_service: true
+brew 'ripgrep'
 brew 'scrypt'
 brew 'sqlite'
 brew 'ttyrec'

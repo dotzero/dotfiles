@@ -17,7 +17,7 @@ function _prepend_path() {
 # ---------------------------------------
 export LC_ALL=ru_RU.UTF-8
 export LANG="ru_RU"
-PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 [ -d $ZROOT/bin ] && _prepend_path "$ZROOT/bin"
 [ -d $HOME/.composer/vendor/bin ] && _prepend_path "$HOME/.composer/vendor/bin"
 [ -d /usr/local/opt/python/libexec/bin ] && _prepend_path "/usr/local/opt/python/libexec/bin"

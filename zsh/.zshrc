@@ -15,7 +15,7 @@ function _prepend_path() {
 
 # Exports
 # ---------------------------------------
-export LC_ALL=ru_RU.UTF-8
+export LC_ALL=en_US.UTF-8
 export LANG="ru_RU"
 PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 [ -d $ZROOT/bin ] && _prepend_path "$ZROOT/bin"

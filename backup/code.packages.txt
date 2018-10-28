@@ -1,11 +1,15 @@
-EditorConfig.EditorConfig
 aaron-bond.better-comments
 bungcip.better-toml
+EditorConfig.EditorConfig
 file-icons.file-icons
 formulahendry.auto-close-tag
+jcbuisson.vue
 JuanBlanco.solidity
+liximomo.sftp
+mikestead.dotenv
 ms-python.python
 ms-vscode.Go
+octref.vetur
 PeterJausovec.vscode-docker
 shanoor.vscode-nginx
 shd101wyy.markdown-preview-enhanced

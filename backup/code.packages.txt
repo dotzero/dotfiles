@@ -6,6 +6,7 @@ formulahendry.auto-close-tag
 jcbuisson.vue
 JuanBlanco.solidity
 liximomo.sftp
+mechatroner.rainbow-csv
 mikestead.dotenv
 ms-python.python
 ms-vscode.Go

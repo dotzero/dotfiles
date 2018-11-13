@@ -1,4 +1,5 @@
 aaron-bond.better-comments
+avli.clojure
 bungcip.better-toml
 EditorConfig.EditorConfig
 file-icons.file-icons
@@ -7,9 +8,12 @@ GitHub.vscode-pull-request-github
 jcbuisson.vue
 JuanBlanco.solidity
 liximomo.sftp
+lonefy.vscode-JS-CSS-HTML-formatter
+mdickin.markdown-shortcuts
 mechatroner.rainbow-csv
 mikestead.dotenv
 ms-python.python
+ms-vscode.azure-account
 ms-vscode.Go
 octref.vetur
 PeterJausovec.vscode-docker

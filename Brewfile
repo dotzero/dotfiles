@@ -35,6 +35,7 @@ brew 'redis', restart_service: true
 brew 'ripgrep'
 brew 'scrypt'
 brew 'sqlite'
+brew 'stern'
 brew 'ttyrec'
 brew 'wget'
 brew 'xz'

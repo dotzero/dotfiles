@@ -19,6 +19,14 @@ python sync.py
 bash .macos
 ```
 
+# Visual Studio Code
+
+```bash
+ln -s /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code /usr/local/bin/code
+rm -rf ~/Library/Application\ Support/Code/User
+ln -s ~/Dropbox/sync/Code/User ~/Library/Application\ Support/Code
+```
+
 ## Updating
 
 ```bash

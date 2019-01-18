@@ -4,7 +4,6 @@ bungcip.better-toml
 EditorConfig.EditorConfig
 file-icons.file-icons
 formulahendry.auto-close-tag
-GitHub.vscode-pull-request-github
 jcbuisson.vue
 JuanBlanco.solidity
 liximomo.sftp

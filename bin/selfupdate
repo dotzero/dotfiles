@@ -39,13 +39,12 @@ if [ -f /usr/local/bin/brew ]; then
   /usr/local/bin/brew update
   /usr/local/bin/brew upgrade
   /usr/local/bin/brew cleanup
-  /usr/local/bin/brew prune
   echo
 fi
 
 if [ -f /usr/local/bin/python3 ]; then
   header "Updating python 3.x modules..."
-  /usr/local/bin/python3 -m pip install --upgrade pip setuptools wheel ansible requests virtualenv virtualenvwrapper
+  /usr/local/bin/python3 -m pip install --upgrade pip setuptools wheel cryptography ansible requests virtualenv virtualenvwrapper
   echo
 fi
 

@@ -20,4 +20,5 @@ shanoor.vscode-nginx
 shd101wyy.markdown-preview-enhanced
 spywhere.whiteviz
 whatwedo.twig
+zamerick.vscode-caddyfile-syntax
 zhuangtongfa.Material-theme

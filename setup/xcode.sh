@@ -4,5 +4,5 @@
 
 xcode-select -p > /dev/null
 if [[ $? != 0 ]] ; then
-	xcode-select --install
+  xcode-select --install
 fi

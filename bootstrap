@@ -4,8 +4,8 @@ set -o nounset
 set -o errexit
 # set -x
 
-source ./init/xcode.sh
-source ./init/brew.sh
-source ./init/ohmyz.sh
+source ./setup/xcode.sh
+source ./setup/brew.sh
+source ./setup/ohmyz.sh
 
-/usr/bin/python ./init/sync.py
+/usr/bin/python ./setup/sync.py

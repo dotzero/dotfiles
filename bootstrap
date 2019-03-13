@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -o nounset
+set -o errexit
+# set -x
+
+source ./init/xcode.sh
+source ./init/brew.sh
+source ./init/ohmyz.sh
+
+/usr/bin/python ./init/sync.py

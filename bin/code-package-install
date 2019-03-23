@@ -3,11 +3,11 @@
 # Usage: code-package-install
 #
 # Installs the vs code packages listed in your packages.txt file
-# located at ~/.0/backup/code.packages.txt
+# located at ~/.0/vscode/packages.txt
 #
 # You can generate a new list based on currently installed
 # packages via code-package-backup
 
 set -e
 
-cat ~/.0/backup/code.packages.txt | xargs -L1 code --install-extension
+cat ~/.0/vscode/packages.txt | xargs -L1 code --install-extension

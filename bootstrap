@@ -1,0 +1,34 @@
+#!/bin/bash
+
+function header() {
+  echo "$(tput sgr 0 1)$(tput setaf 6)$1$(tput sgr0)"
+}
+
+# xcode-select
+header "Install xcode-select..."
+xcode-select -p > /dev/null
+if [[ $? != 0 ]] ; then
+  xcode-select --install
+fi
+
+# brew
+header "Install homebrew..."
+source ./homebrew/brew.sh
+
+# git-friendly
+header "Install git-friendly..."
+sudo bash < <( curl -s https://raw.githubusercontent.com/jamiew/git-friendly/master/install.sh )
+
+# tilde
+header "Install dot files..."
+/usr/local/bin/python3 sync.py
+
+# python
+header "Install python 3.x modules..."
+/usr/local/bin/python3 -m pip install --upgrade pip setuptools wheel cryptography ansible requests virtualenv virtualenvwrapper
+
+# oh-my-zsh
+header "Install oh-my-zsh..."
+if [ ! -e ~/.oh-my-zsh ]; then
+  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi

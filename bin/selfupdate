@@ -43,7 +43,7 @@ fi
 
 if [ -f /usr/local/bin/python3 ]; then
   header "Updating python 3.x modules..."
-  /usr/local/bin/python3 -m pip install --upgrade pip setuptools wheel cryptography ansible requests virtualenv virtualenvwrapper
+  /usr/local/bin/python3 -m pip install --upgrade -r ~/.0/backup/requirements.txt
   echo
 fi
 

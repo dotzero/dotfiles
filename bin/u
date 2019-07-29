@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+date_default_timezone_set('Europe/Moscow');
+
+if (!isset($argv[1])) {
+    exit("Usage: u <timestamp|date>\n");
+} elseif (is_numeric($argv[1])) {
+    echo date('Y-m-d H:i:s', $argv[1]);
+} else {
+    printf("%s = %s", $argv[1], strtotime($argv[1]));
+}

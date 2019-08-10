@@ -8,10 +8,10 @@ JuanBlanco.solidity
 liximomo.sftp
 mechatroner.rainbow-csv
 mikestead.dotenv
+ms-azuretools.vscode-docker
 ms-python.python
 ms-vscode.Go
 octref.vetur
-PeterJausovec.vscode-docker
 shanoor.vscode-nginx
 shd101wyy.markdown-preview-enhanced
 spywhere.whiteviz

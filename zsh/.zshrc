@@ -13,21 +13,14 @@ function _prepend_path() {
   fi
 }
 
-# Exports
+# Paths
 # ---------------------------------------
-export LC_ALL=en_US.UTF-8
-export LANG="ru_RU"
 PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 [ -d $ZROOT/bin ] && _prepend_path "$ZROOT/bin"
 [ -d $HOME/.composer/vendor/bin ] && _prepend_path "$HOME/.composer/vendor/bin"
 [ -d /usr/local/opt/python/libexec/bin ] && _prepend_path "/usr/local/opt/python/libexec/bin"
 [ -d /usr/local/opt/go/libexec/bin ] && _prepend_path "/usr/local/opt/go/libexec/bin"
-export PATH
-export TERM="xterm-256color"
-export EDITOR="micro"
-export HISTCONTROL="ignoredups" # Ignore duplicate commands in the history
-export HISTFILESIZE=10000 # Increase the maximum number of lines contained in the history file
-export HISTSIZE=10000 # Increase the maximum number of commands to remember
+[ -d $HOME/yandex-cloud/bin ] && _prepend_path "$HOME/yandex-cloud/bin"
 
 # Virtualenvwrapper
 # ---------------------------------------
@@ -45,6 +38,17 @@ if [ -d $HOME/go ]; then
   export GOPATH="$HOME/go"
   _prepend_path "$GOPATH/bin"
 fi
+
+# Exports
+# ---------------------------------------
+export PATH
+export LC_ALL=en_US.UTF-8
+export LANG="ru_RU"
+export TERM="xterm-256color"
+export EDITOR="micro"
+export HISTCONTROL="ignoredups" # Ignore duplicate commands in the history
+export HISTFILESIZE=10000 # Increase the maximum number of lines contained in the history file
+export HISTSIZE=10000 # Increase the maximum number of commands to remember
 
 # Add all known keys to the SSH agent
 ssh-add -A 2>/dev/null;

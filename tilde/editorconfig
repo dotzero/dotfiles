@@ -8,7 +8,7 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{css,sass,scss,js,sh,json,yaml}]
+[*.{css,sass,scss,js,sh,json,yaml,yml}]
 indent_size = 2
 
 [Makefile]

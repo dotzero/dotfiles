@@ -49,6 +49,8 @@ export EDITOR="micro"
 export HISTCONTROL="ignoredups" # Ignore duplicate commands in the history
 export HISTFILESIZE=10000 # Increase the maximum number of lines contained in the history file
 export HISTSIZE=10000 # Increase the maximum number of commands to remember
+export GIT_FRIENDLY_NO_COMPOSER=true # git-friendly
+export GIT_FRIENDLY_NO_NPM=true # git-friendly
 
 # Add all known keys to the SSH agent
 ssh-add -A 2>/dev/null;

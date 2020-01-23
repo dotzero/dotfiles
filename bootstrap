@@ -32,3 +32,6 @@ header "Install oh-my-zsh..."
 if [ ! -e ~/.oh-my-zsh ]; then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
+
+# fonts
+cp -vr ./fonts/*.ttf /Library/Fonts/

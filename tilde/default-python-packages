@@ -1,8 +1,5 @@
-pip
-setuptools
-wheel
-cryptography
 ansible
+cryptography
 requests
 virtualenv
 virtualenvwrapper

@@ -20,15 +20,6 @@ PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 [ -d $HOME/.composer/vendor/bin ] && _prepend_path "$HOME/.composer/vendor/bin"
 [ -d $HOME/yandex-cloud/bin ] && _prepend_path "$HOME/yandex-cloud/bin"
 
-# Virtualenvwrapper
-# ---------------------------------------
-# if [ -f /usr/local/bin/virtualenvwrapper_lazy.sh ]; then
-#   export e="$HOME/.virtualenvs"
-#   export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
-#   export VIRTUALENVWRAPPER_SCRIPT="/usr/local/bin/virtualenvwrapper.sh"
-#   source /usr/local/bin/virtualenvwrapper_lazy.sh
-# fi
-
 # Golang
 # ---------------------------------------
 if [ -d $HOME/go ]; then
@@ -53,6 +44,15 @@ export GIT_FRIENDLY_NO_NPM=true # git-friendly
 # asdf version manager
 # ---------------------------------------
 [ -f $(brew --prefix asdf)/asdf.sh ] && source $(brew --prefix asdf)/asdf.sh
+
+# Virtualenvwrapper
+# ---------------------------------------
+# if [ -f $HOME/.asdf/shims/virtualenvwrapper_lazy.sh ]; then
+#   export e="$HOME/.virtualenvs"
+#   export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
+#   export VIRTUALENVWRAPPER_SCRIPT="/usr/local/bin/virtualenvwrapper.sh"
+#   source $HOME/.asdf/shims/virtualenvwrapper_lazy.sh
+# fi
 
 # Add all known keys to the SSH agent
 ssh-add -A 2>/dev/null;

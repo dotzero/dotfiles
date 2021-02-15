@@ -50,6 +50,10 @@ export HISTSIZE=10000 # Increase the maximum number of commands to remember
 export GIT_FRIENDLY_NO_COMPOSER=true # git-friendly
 export GIT_FRIENDLY_NO_NPM=true # git-friendly
 
+# asdf version manager
+# ---------------------------------------
+[ -f $(brew --prefix asdf)/asdf.sh ] && source $(brew --prefix asdf)/asdf.sh
+
 # Add all known keys to the SSH agent
 ssh-add -A 2>/dev/null;
 

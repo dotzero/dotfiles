@@ -5,5 +5,5 @@ ZSH_THEME="pure"
 DISABLE_AUTO_UPDATE="true"
 HIST_STAMPS="yyyy-mm-dd"
 ZSH_CUSTOM=$HOME/.0/zsh
-plugins=(asdf brew composer cp docker-compose extract github gitignore golang history httpie kubectl z)
+plugins=(brew composer cp docker-compose extract github gitignore golang history httpie kubectl z)
 source $ZSH/oh-my-zsh.sh

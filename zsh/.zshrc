@@ -41,18 +41,14 @@ export HISTSIZE=10000 # Increase the maximum number of commands to remember
 export GIT_FRIENDLY_NO_COMPOSER=true # git-friendly
 export GIT_FRIENDLY_NO_NPM=true # git-friendly
 
-# asdf version manager
-# ---------------------------------------
-[ -f $(brew --prefix asdf)/asdf.sh ] && source $(brew --prefix asdf)/asdf.sh
-
 # Virtualenvwrapper
 # ---------------------------------------
-# if [ -f $HOME/.asdf/shims/virtualenvwrapper_lazy.sh ]; then
-#   export e="$HOME/.virtualenvs"
-#   export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
-#   export VIRTUALENVWRAPPER_SCRIPT="/usr/local/bin/virtualenvwrapper.sh"
-#   source $HOME/.asdf/shims/virtualenvwrapper_lazy.sh
-# fi
+if [ -f /usr/local/bin/virtualenvwrapper_lazy.sh ]; then
+  export e="$HOME/.virtualenvs"
+  export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
+  export VIRTUALENVWRAPPER_SCRIPT="/usr/local/bin/virtualenvwrapper.sh"
+  source /usr/local/bin/virtualenvwrapper_lazy.sh
+fi
 
 # Add all known keys to the SSH agent
 ssh-add -A 2>/dev/null;

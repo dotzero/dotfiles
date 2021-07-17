@@ -41,9 +41,9 @@ if [ -f /usr/local/bin/brew ]; then
   echo
 fi
 
-if [ -f $HOME/.asdf/shims/python ]; then
+if [ -f /usr/local/bin/python3 ]; then
   header "Updating python modules..."
-  $HOME/.asdf/shims/python -m pip install --upgrade -r $HOME/.default-python-packages
+  /usr/local/bin/python3 -m pip install --upgrade -r ~/.default-python-packages
   echo
 fi
 

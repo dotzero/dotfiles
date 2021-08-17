@@ -19,6 +19,7 @@ PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 [ -d $ZROOT/bin ] && _prepend_path "$ZROOT/bin"
 [ -d $HOME/.composer/vendor/bin ] && _prepend_path "$HOME/.composer/vendor/bin"
 [ -d $HOME/yandex-cloud/bin ] && _prepend_path "$HOME/yandex-cloud/bin"
+[ -d $HOME/.poetry/bin ] && _prepend_path "$HOME/.poetry/bin"
 
 # Golang
 # ---------------------------------------

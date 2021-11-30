@@ -33,17 +33,17 @@ if [ -f /usr/local/bin/composer ]; then
   echo
 fi
 
-if [ -f /usr/local/bin/brew ]; then
+if [ -f /opt/homebrew/bin/brew ]; then
   header "Updating Homebrew..."
-  /usr/local/bin/brew update
-  /usr/local/bin/brew upgrade
-  /usr/local/bin/brew cleanup
+  /opt/homebrew/bin/brew update
+  /opt/homebrew/bin/brew upgrade
+  /opt/homebrew/bin/brew cleanup
   echo
 fi
 
-if [ -f /usr/local/bin/python3 ]; then
+if [ -f /opt/homebrew/bin/python3 ]; then
   header "Updating python modules..."
-  /usr/local/bin/python3 -m pip install --upgrade -r ~/.default-python-packages
+  /opt/homebrew/bin/python3 -m pip install --upgrade -r ~/.default-python-packages
   echo
 fi
 

@@ -1,31 +1,30 @@
 # https://github.com/Homebrew/homebrew-bundle
-# 1. brew tap homebrew/bundle
-# 2. brew bundle -v
+# brew bundle -v
 
-tap 'dotzero/tap'
 brew 'ack'
+brew 'bat'
+brew 'ctop'
 brew 'dotzero/tap/git-profile'
 brew 'git'
 brew 'gnupg'
 brew 'go'
+brew 'golangci-lint'
+brew 'goreleaser'
 brew 'httpie'
 brew 'hugo'
 brew 'jq'
-brew 'nmap'
 brew 'node'
 brew 'p7zip'
 brew 'pv'
-brew 'redis', restart_service: true
 brew 'ripgrep'
 brew 'sqlite'
 brew 'wget'
 brew 'xz'
+brew 'yarn'
 brew 'youtube-dl'
 cask 'appcleaner'
+cask 'handbrake'
 cask 'imageoptim'
-cask 'iterm2'
-cask 'mac2imgur'
 cask 'numi'
 cask 'typora'
-cask 'visual-studio-code'
 cask 'vlc'

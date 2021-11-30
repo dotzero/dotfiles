@@ -15,7 +15,7 @@ function _prepend_path() {
 
 # Paths
 # ---------------------------------------
-PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 [ -d $ZROOT/bin ] && _prepend_path "$ZROOT/bin"
 [ -d $HOME/.composer/vendor/bin ] && _prepend_path "$HOME/.composer/vendor/bin"
 [ -d $HOME/yandex-cloud/bin ] && _prepend_path "$HOME/yandex-cloud/bin"
@@ -24,7 +24,7 @@ PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 # Golang
 # ---------------------------------------
 if [ -d $HOME/go ]; then
-  export GOROOT="/usr/local/opt/go/libexec"
+  export GOROOT="/opt/homebrew/opt/go/libexec"
   export GOPATH="$HOME/go"
   _prepend_path "$GOPATH/bin"
 fi

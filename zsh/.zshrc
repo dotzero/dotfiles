@@ -24,9 +24,14 @@ PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/
 # Golang
 # ---------------------------------------
 if [ -d $HOME/go ]; then
-  export GOROOT="/opt/homebrew/opt/go/libexec"
   export GOPATH="$HOME/go"
   _prepend_path "$GOPATH/bin"
+fi
+if [ -d /usr/local/opt/go/libexec ]; then
+  export GOROOT="/usr/local/opt/go/libexec"
+fi
+if [ -d /opt/homebrew/opt/go/libexec ]; then
+  export GOROOT="/opt/homebrew/opt/go/libexec"
 fi
 
 # Exports

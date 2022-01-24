@@ -15,7 +15,8 @@ function _prepend_path() {
 
 # Paths
 # ---------------------------------------
-PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+[ -d /opt/homebrew/bin ] && _prepend_path "/opt/homebrew/bin"
 [ -d $ZROOT/bin ] && _prepend_path "$ZROOT/bin"
 [ -d $HOME/.composer/vendor/bin ] && _prepend_path "$HOME/.composer/vendor/bin"
 [ -d $HOME/yandex-cloud/bin ] && _prepend_path "$HOME/yandex-cloud/bin"
@@ -26,9 +27,6 @@ PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/
 if [ -d $HOME/go ]; then
   export GOPATH="$HOME/go"
   _prepend_path "$GOPATH/bin"
-fi
-if [ -d /usr/local/opt/go/libexec ]; then
-  export GOROOT="/usr/local/opt/go/libexec"
 fi
 if [ -d /opt/homebrew/opt/go/libexec ]; then
   export GOROOT="/opt/homebrew/opt/go/libexec"
@@ -52,7 +50,7 @@ export GIT_FRIENDLY_NO_NPM=true # git-friendly
 if [ -f /opt/homebrew/bin/virtualenvwrapper_lazy.sh ]; then
   export e="$HOME/.virtualenvs"
   export VIRTUALENVWRAPPER_PYTHON="/opt/homebrew/bin/python3"
-  export VIRTUALENVWRAPPER_SCRIPT="ca"
+  export VIRTUALENVWRAPPER_SCRIPT="/opt/homebrew/bin/virtualenvwrapper.sh"
   source /opt/homebrew/bin/virtualenvwrapper_lazy.sh
 fi
 

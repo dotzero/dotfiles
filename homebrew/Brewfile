@@ -3,9 +3,11 @@
 
 brew 'ack'
 brew 'bat'
+brew 'exa'
 brew 'ctop'
 brew 'dotzero/tap/git-profile'
 brew 'git'
+brew 'git-friendly'
 brew 'gnupg'
 brew 'go'
 brew 'golangci-lint'

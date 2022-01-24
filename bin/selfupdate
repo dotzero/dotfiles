@@ -8,11 +8,6 @@ function header() {
 sudo -v
 echo
 
-# git-friendly
-header "Updating git-friendly..."
-sudo bash < <( curl -s https://raw.githubusercontent.com/jamiew/git-friendly/master/install.sh )
-echo
-
 if [ -f ~/.oh-my-zsh/tools/upgrade.sh ]; then
   env ZSH=~/.oh-my-zsh sh ~/.oh-my-zsh/tools/upgrade.sh
   echo

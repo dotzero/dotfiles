@@ -1,0 +1,7 @@
+docker run \
+  --rm -it \
+  -p 3000:3000 \
+  -v $PWD:/app \
+  -w "/app" \
+  php:5.6-cli \
+  php -S 0.0.0.0:3000

@@ -12,6 +12,7 @@ ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
+ms-vscode.sublime-keybindings
 shanoor.vscode-nginx
 shd101wyy.markdown-preview-enhanced
 spywhere.whiteviz

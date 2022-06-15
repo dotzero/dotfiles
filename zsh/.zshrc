@@ -1,34 +1,39 @@
 # Oh My Dotfiles root
-# ---------------------------------------
+# ------------------------------------------------------------------------------
 ZROOT=$HOME/.0
 
 # Oh My Zsh
-# ---------------------------------------
-[ -f $ZROOT/zsh/.oh-my-zsh ] && source $ZROOT/zsh/.oh-my-zsh
+# ------------------------------------------------------------------------------
+export ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="pure"
+ZSH_CUSTOM=$HOME/.0/zsh
+HIST_STAMPS="yyyy-mm-dd"
+zstyle ':omz:update' mode disabled
+plugins=(brew composer cp docker-compose extract github gitignore golang history httpie kubectl z poetry)
+source $ZSH/oh-my-zsh.sh
 
-# Prepend $PATH without duplicates
+# Paths
+# ------------------------------------------------------------------------------
 function _prepend_path() {
   if ! $( echo "$PATH" | tr ":" "\n" | grep -qx "$1" ) ; then
     PATH="$1:$PATH"
   fi
 }
 
-# Paths
-# ---------------------------------------
 PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 [ -d $ZROOT/bin ] && _prepend_path "$ZROOT/bin"
 [ -d $HOME/.composer/vendor/bin ] && _prepend_path "$HOME/.composer/vendor/bin"
-[ -d $HOME/yandex-cloud/bin ] && _prepend_path "$HOME/yandex-cloud/bin"
 [ -d $HOME/.poetry/bin ] && _prepend_path "$HOME/.poetry/bin"
+[ -d $HOME/yandex-cloud/bin ] && _prepend_path "$HOME/yandex-cloud/bin"
 
 # Homebrew
-# ---------------------------------------
+# ------------------------------------------------------------------------------
 if [ -d /opt/homebrew/bin ]; then
   source <(/opt/homebrew/bin/brew shellenv)
 fi
 
 # Golang
-# ---------------------------------------
+# ------------------------------------------------------------------------------
 if [ -d $HOME/go ]; then
   export GOPATH="$HOME/go"
   _prepend_path "$GOPATH/bin"
@@ -38,7 +43,7 @@ if [ -d /opt/homebrew/opt/go/libexec ]; then
 fi
 
 # Exports
-# ---------------------------------------
+# ------------------------------------------------------------------------------
 export PATH
 export LC_ALL=en_US.UTF-8
 export LANG="ru_RU"
@@ -51,7 +56,7 @@ export GIT_FRIENDLY_NO_COMPOSER=true # git-friendly
 export GIT_FRIENDLY_NO_NPM=true # git-friendly
 
 # Virtualenvwrapper
-# ---------------------------------------
+# ------------------------------------------------------------------------------
 if [ -f /opt/homebrew/bin/virtualenvwrapper_lazy.sh ]; then
   export e="$HOME/.virtualenvs"
   export VIRTUALENVWRAPPER_PYTHON="/opt/homebrew/bin/python3"
@@ -60,7 +65,7 @@ if [ -f /opt/homebrew/bin/virtualenvwrapper_lazy.sh ]; then
 fi
 
 # Add all known keys to the SSH agent
-ssh-add -A 2>/dev/null;
+ssh-add --apple-load-keychain 2>/dev/null;
 
 # Load extra (private) settings
 [ -f ~/.zshlocal ] && source ~/.zshlocal

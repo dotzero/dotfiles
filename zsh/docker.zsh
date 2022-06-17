@@ -1,7 +1,3 @@
-# ------------------------------------
-# Docker alias and function
-# ------------------------------------
-
 alias docker-clean=' \
   docker container prune -f ; \
   docker image prune -f ; \

@@ -1,6 +1,16 @@
-# Oh My Dotfiles root
+# Exports
 # ------------------------------------------------------------------------------
-ZROOT=$HOME/.0
+export DOTFILES=$HOME/.0
+export LC_ALL=en_US.UTF-8
+export LANG="ru_RU"
+export TERM="xterm-256color"
+export EDITOR="nano"
+export HISTCONTROL="ignoredups"
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+export GIT_FRIENDLY_NO_COMPOSER=true # git-friendly (no composer install)
+export GIT_FRIENDLY_NO_NPM=true # git-friendly (no npm install)
+export GIT_FRIENDLY_NO_YARN=true # git-friendly (no yarn install)
 
 # Oh My Zsh
 # ------------------------------------------------------------------------------
@@ -21,10 +31,11 @@ function _prepend_path() {
 }
 
 PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
-[ -d $ZROOT/bin ] && _prepend_path "$ZROOT/bin"
+[ -d $DOTFILES/bin ] && _prepend_path "$DOTFILES/bin"
 [ -d $HOME/.composer/vendor/bin ] && _prepend_path "$HOME/.composer/vendor/bin"
 [ -d $HOME/.poetry/bin ] && _prepend_path "$HOME/.poetry/bin"
 [ -d $HOME/yandex-cloud/bin ] && _prepend_path "$HOME/yandex-cloud/bin"
+export PATH
 
 # Homebrew
 # ------------------------------------------------------------------------------
@@ -37,23 +48,8 @@ fi
 if [ -d $HOME/go ]; then
   export GOPATH="$HOME/go"
   _prepend_path "$GOPATH/bin"
+  export PATH
 fi
-if [ -d /opt/homebrew/opt/go/libexec ]; then
-  export GOROOT="/opt/homebrew/opt/go/libexec"
-fi
-
-# Exports
-# ------------------------------------------------------------------------------
-export PATH
-export LC_ALL=en_US.UTF-8
-export LANG="ru_RU"
-export TERM="xterm-256color"
-export EDITOR="nano"
-export HISTCONTROL="ignoredups" # Ignore duplicate commands in the history
-export HISTFILESIZE=10000 # Increase the maximum number of lines contained in the history file
-export HISTSIZE=10000 # Increase the maximum number of commands to remember
-export GIT_FRIENDLY_NO_COMPOSER=true # git-friendly
-export GIT_FRIENDLY_NO_NPM=true # git-friendly
 
 # Virtualenvwrapper
 # ------------------------------------------------------------------------------
@@ -65,7 +61,9 @@ if [ -f /opt/homebrew/bin/virtualenvwrapper_lazy.sh ]; then
 fi
 
 # Add all known keys to the SSH agent
+# ------------------------------------------------------------------------------
 ssh-add --apple-load-keychain 2>/dev/null;
 
 # Load extra (private) settings
+# ------------------------------------------------------------------------------
 [ -f ~/.zshlocal ] && source ~/.zshlocal

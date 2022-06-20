@@ -4,7 +4,7 @@ import os
 import glob
 import shutil
 
-MAP = {'~/.0/tilde': '~'}
+MAP = {'~/.0/tilde': '~', '~/.0/.config':'~/.config'}
 EXCLUDE = []
 NO_DOT_PREFIX = []
 

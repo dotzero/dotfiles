@@ -1,0 +1,11 @@
+only = ["brew_cask", "brew_formula", "git_repos", "custom_commands", "shell"]
+ignore_failures = ["custom_commands"]
+cleanup = true
+
+[git]
+repos = [
+   "~/.0"
+]
+
+[commands]
+"Default Python Packages" = "/opt/homebrew/bin/python3 -m pip install --upgrade -r ~/.default-python-packages"

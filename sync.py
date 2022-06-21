@@ -6,7 +6,7 @@ import shutil
 
 MAP = {'~/.0/tilde': '~', '~/.0/.config':'~/.config'}
 EXCLUDE = []
-NO_DOT_PREFIX = []
+NO_DOT_PREFIX = ['topgrade.toml']
 
 
 def force_remove(path):
@@ -29,7 +29,7 @@ def link(source, target):
         if filename not in NO_DOT_PREFIX:
             dotfile = '.' + dotfile
 
-        source_file = os.path.join(source, filename).replace('~', '.')
+        source_file = os.path.join(os.path.expanduser(source), filename)
         target_file = os.path.join(os.path.expanduser(target), dotfile)
 
         # Check that we aren't overwriting anything

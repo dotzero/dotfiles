@@ -1,3 +1,5 @@
+alias selfupdate="topgrade"
+
 # Travelesting
 alias ..="cd .."
 alias ...="cd ../.."

@@ -1,0 +1,6 @@
+docker run \
+  --rm -it \
+  -v $PWD:/app \
+  -w "/app" \
+  php:7.3-cli \
+  php $@

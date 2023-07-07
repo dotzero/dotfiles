@@ -1,3 +1,4 @@
+[misc]
 only = ["brew_cask", "brew_formula", "git_repos", "custom_commands", "shell"]
 ignore_failures = ["custom_commands"]
 cleanup = true

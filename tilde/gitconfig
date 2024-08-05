@@ -31,8 +31,8 @@
     # Remove a local and remote Git tag
     rmtag = "!f() { git tag -d $1 && git push origin :refs/tags/$1; }; f"
 
-    # Commit a random commit message from http://whatthecommit.com/
-    random = !"git add -A; git commit -am \"$(echo $(curl -s http://whatthecommit.com/index.txt)\"\")\"; git push"
+    # Commit a random commit message from https://whatthecommit.com/
+    random = !"git add -A; git commit -am \"$(echo $(curl -s https://whatthecommit.com/index.txt)\"\")\"; git push"
 
 [apply]
     whitespace = nowarn

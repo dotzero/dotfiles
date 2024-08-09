@@ -1,12 +1,10 @@
+# https://github.com/topgrade-rs/topgrade/blob/main/config.example.toml
 [misc]
-only = ["brew_cask", "brew_formula", "git_repos", "custom_commands", "shell"]
-ignore_failures = ["custom_commands"]
+only = ["brew_cask", "brew_formula", "git_repos"]
 cleanup = true
+skip_notify = true
 
 [git]
 repos = [
    "~/.0"
 ]
-
-[commands]
-"Default Python Packages" = "/opt/homebrew/bin/python3 -m pip install --upgrade -r ~/.default-python-packages"

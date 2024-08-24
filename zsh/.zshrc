@@ -15,12 +15,17 @@ export GIT_FRIENDLY_NO_YARN=true # git-friendly (no yarn install)
 # Oh My Zsh
 # ------------------------------------------------------------------------------
 export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="pure"
+ZSH_THEME=""
 ZSH_CUSTOM=$HOME/.0/zsh
 HIST_STAMPS="yyyy-mm-dd"
+
 zstyle ':omz:update' mode disabled
-plugins=(brew composer cp docker-compose extract github gitignore golang history httpie kubectl z poetry)
+plugins=(brew composer cp extract github gitignore golang history httpie kubectl z poetry)
 source $ZSH/oh-my-zsh.sh
+
+fpath+=($ZSH_CUSTOM/pure)
+autoload -U promptinit; promptinit
+prompt pure
 
 # Paths
 # ------------------------------------------------------------------------------

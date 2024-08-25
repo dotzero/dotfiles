@@ -119,6 +119,7 @@ echo "Unmounting Disk"
 diskutil unmount $_udisk
 
 echo "Writing image"
+sudo -v
 pv -ptre ${DISTRO} | sudo dd bs=1m of=${_rawdisk}
 
 # Eject disk

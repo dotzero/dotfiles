@@ -9,6 +9,7 @@ alias dn="cd ~/Downloads"
 # Listing
 alias ls="ls -G"
 alias la="ls -AGFoh"
+alias lsusb="ls /dev/tty* | grep usb" # to find /dev/ name of USB Device
 alias grep="grep --color=auto"
 
 # File manipulation

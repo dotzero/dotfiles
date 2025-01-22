@@ -24,7 +24,7 @@
         "**/Thumbs.db",
         "**/.classpath",
         "**/.settings",
-        // above is default from Zed
+        // above is default
         "**/out",
         "**/dist",
         "**/.husky",

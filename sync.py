@@ -6,7 +6,7 @@ import shutil
 
 MAP = {'~/.0/tilde': '~', '~/.0/.config':'~/.config'}
 EXCLUDE = []
-NO_DOT_PREFIX = ['ghostty', 'topgrade.toml']
+NO_DOT_PREFIX = ['ghostty', 'zed', 'topgrade.toml']
 
 
 def force_remove(path):

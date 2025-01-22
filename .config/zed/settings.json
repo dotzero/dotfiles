@@ -1,0 +1,57 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+    "auto_indent_on_paste": true,
+    "base_keymap": "SublimeText",
+    "buffer_font_fallbacks": ["FiraCode Nerd Font Mono", "Menlo", "Monaco"],
+    "buffer_font_family": "JetBrains Mono",
+    "buffer_font_size": 12,
+    "buffer_font_weight": 300,
+    "buffer_line_height": "comfortable",
+    "ensure_final_newline_on_save": true,
+    "file_scan_exclusions": [
+        "**/.git",
+        "**/.svn",
+        "**/.hg",
+        "**/CVS",
+        "**/.DS_Store",
+        "**/Thumbs.db",
+        "**/.classpath",
+        "**/.settings",
+        // above is default from Zed
+        "**/out",
+        "**/dist",
+        "**/.husky",
+        "**/.turbo",
+        "**/.vscode-test",
+        "**/.vscode",
+        "**/.next",
+        "**/.storybook",
+        "**/.tap",
+        "**/.nyc_output",
+        "**/report",
+        "**/node_modules"
+    ],
+    "file_types": {
+        "Dockerfile": ["Dockerfile", "Dockerfile.*"],
+        "JSON": ["json", "jsonc", "*.code-snippets"]
+    },
+    "remove_trailing_whitespace_on_save": true,
+    "restore_on_startup": "none",
+    "scroll_beyond_last_line": "off",
+    "show_whitespaces": "selection",
+    "tab_size": 4,
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false
+    },
+    "theme": "One Dark",
+    "ui_font_size": 14,
+    "wrap_guides": [80, 120]
+}

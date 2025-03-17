@@ -4,24 +4,32 @@ function header() {
   echo "$(tput sgr 0 1)$(tput setaf 6)$1$(tput sgr0)"
 }
 
+function wait() {
+  printf "%s " "Press enter to continue...";read ans
+}
+
 # xcode-select
 header "Install xcode-select..."
 xcode-select -p > /dev/null
 if [[ $? != 0 ]] ; then
   xcode-select --install
 fi
+wait
 
 # brew
 header "Install homebrew..."
-source ./homebrew/brew.sh
+source ./homebrew/install.sh
+wait
 
 # git-friendly
 header "Install git-friendly..."
-sudo bash < <( curl -s https://raw.githubusercontent.com/jamiew/git-friendly/master/install.sh )
+sudo bash < <(curl -s https://raw.githubusercontent.com/jamiew/git-friendly/master/install.sh)
+wait
 
 # tilde
 header "Install dot files..."
 python3 sync.py
+wait
 
 # oh-my-zsh
 header "Install oh-my-zsh..."

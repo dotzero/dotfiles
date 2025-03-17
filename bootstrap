@@ -21,17 +21,10 @@ sudo bash < <( curl -s https://raw.githubusercontent.com/jamiew/git-friendly/mas
 
 # tilde
 header "Install dot files..."
-/usr/local/bin/python3 sync.py
-
-# python
-header "Install python 3.x modules..."
-/usr/local/bin/python3 -m pip install --upgrade pip setuptools wheel cryptography ansible requests virtualenv virtualenvwrapper
+python3 sync.py
 
 # oh-my-zsh
 header "Install oh-my-zsh..."
 if [ ! -e ~/.oh-my-zsh ]; then
-  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
-
-# fonts
-cp -vr ./fonts/*.ttf /Library/Fonts/

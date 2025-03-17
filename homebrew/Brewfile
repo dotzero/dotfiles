@@ -4,7 +4,6 @@
 tap "dotzero/tap"
 tap "git-friendly/git-friendly"
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 brew "ack"
 brew "ansible"
 brew "bat"

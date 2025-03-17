@@ -9,4 +9,7 @@ fi
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-brew bundle -v --file=${DIR}/Brewfile
+if [ -d /opt/homebrew/bin ]; then
+  source <(/opt/homebrew/bin/brew shellenv)
+  /opt/homebrew/bin/brew bundle -v --file=${DIR}/Brewfile
+fi

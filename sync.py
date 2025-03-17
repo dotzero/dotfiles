@@ -49,6 +49,9 @@ def link(source, target):
 
 
 def main():
+    if not os.path.exists('~/.config'):
+        os.makedirs('~/.config')
+
     for key in MAP:
         link(key, MAP[key])
 

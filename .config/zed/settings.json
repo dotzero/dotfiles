@@ -42,6 +42,26 @@
         "Dockerfile": ["Dockerfile", "Dockerfile.*"],
         "JSON": ["json", "jsonc", "*.code-snippets"]
     },
+    "git": {
+        "inline_blame": {
+            "enabled": false
+        }
+    },
+    "lsp": {
+        "gopls": {
+            "initialization_options": {
+                "hints": {
+                    "assignVariableTypes": true,
+                    "compositeLiteralFields": true,
+                    "compositeLiteralTypes": true,
+                    "constantValues": true,
+                    "functionTypeParameters": true,
+                    "parameterNames": true,
+                    "rangeVariableTypes": true
+                }
+            }
+        }
+    },
     "remove_trailing_whitespace_on_save": true,
     "restore_on_startup": "none",
     "scroll_beyond_last_line": "off",

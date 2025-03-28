@@ -47,6 +47,21 @@
             "enabled": false
         }
     },
+    "languages": {
+        "Go": {
+            "code_actions_on_format": {
+                "source.organizeImports": true
+            },
+            "language_servers": ["gopls", "..."]
+        },
+        "Python": {
+            "tab_size": 4,
+            "format_on_save": "off"
+        },
+        "JavaScript": {
+            "tab_size": 2
+        }
+    },
     "lsp": {
         "gopls": {
             "initialization_options": {

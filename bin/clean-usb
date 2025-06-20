@@ -1,0 +1,33 @@
+#!/bin/zsh
+
+CMD=$0
+USB=$1
+USB_PATH=/Volumes/${USB}
+
+function usage {
+    cat <<EOU
+
+Usage:
+
+    $CMD USB_VOLUME_NAME
+
+Volumes:
+
+`ls -l /Volumes`
+
+EOU
+    exit 1
+}
+
+if [ "${USB}" = "" -o ! -d ${USB_PATH} ]; then
+  usage
+fi
+
+sudo mdutil -i off -d ${USB_PATH}
+sudo rm -rf ${USB_PATH}/.fseventsd 2> /dev/null
+# sudo rm -rf ${USB_PATH}/.Spotlight-V* 2> /dev/null
+# sudo rm -rf ${USB_PATH}/.Trashes 2> /dev/null
+mkdir ${USB_PATH}/.fseventsd
+touch ${USB_PATH}/.fseventsd/no_log ${USB_PATH}/.metadata_never_index
+dot_clean -m ${USB_PATH} 2> /dev/null
+echo "Done."

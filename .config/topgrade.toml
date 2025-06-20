@@ -8,3 +8,6 @@ skip_notify = true
 repos = [
    "~/.0"
 ]
+
+[post_commands]
+"brew prune" = "brew cleanup --prune=all"

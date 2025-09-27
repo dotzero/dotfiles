@@ -36,3 +36,8 @@ header "Install oh-my-zsh..."
 if [ ! -e ~/.oh-my-zsh ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
+
+# fix QuickLook
+if [ -e ~/Library/QuickLook ]; then
+  xattr -d -r com.apple.quarantine ~/Library/QuickLook
+fi

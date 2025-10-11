@@ -16,8 +16,8 @@ alias grep="grep --color=auto"
 alias rsynccopy="rsync --partial --progress --append --rsh=ssh -r -h " # cp with progressbar
 alias rsyncmove="rsync --partial --progress --append --rsh=ssh -r -h --remove-sent-files " # mv with progressbar
 alias rmds="find . -name '.DS_Store' -depth -exec rm -v {} \;" # rm .DS_Store files
+alias rmdot="dot_clean -m "
 alias dos2unix="perl -pi -e 's/\r\n/\n/g'"
-alias dotclean="dot_clean -m "
 
 # Networking
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"

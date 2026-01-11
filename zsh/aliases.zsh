@@ -26,4 +26,5 @@ alias flush="dscacheutil -flushcache" # Flush DNS cache
 alias pubkey="more ~/.ssh/id_ed25519.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'" # Copy my public key to the pasteboard
 
 # Downloads
-alias yt-video="yt-dlp --console-title -S res,ext:mp4:m4a --recode mp4"
+alias dl="yt-dlp --console-title -S res,ext:mp4:m4a --recode mp4"
+alias dl-chrome="yt-dlp --console-title -S res,ext:mp4:m4a --recode mp4 --cookies-from-browser=chrome"

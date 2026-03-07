@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+check_cmd() {
+    if ! command -v "$1" >/dev/null 2>&1; then
+        echo "Error: '$1' is not installed or not in PATH" >&2
+        exit 1
+    fi
+}
+
+check_cmd black
+check_cmd isort
+check_cmd ruff
+
+TARGET="${*:-.}"
+
+echo "Running Python formatter pipeline..."
+
+isort "$TARGET"
+black "$TARGET"
+ruff check "$TARGET" --fix
+ruff clean
+
+echo "✓ formatting complete"

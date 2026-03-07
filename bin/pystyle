@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+ARGS="$@"
+
+black $ARGS
+isort $ARGS
+ruff check $ARGS && ruff clean

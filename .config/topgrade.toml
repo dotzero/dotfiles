@@ -1,6 +1,6 @@
 # https://github.com/topgrade-rs/topgrade/blob/main/config.example.toml
 [misc]
-only = ["brew_cask", "brew_formula", "git_repos"]
+only = ["brew_cask", "brew_formula", "git_repos", "shell"]
 cleanup = true
 skip_notify = true
 

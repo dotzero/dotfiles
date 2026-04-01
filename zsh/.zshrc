@@ -24,7 +24,7 @@ plugins=(brew composer cp extract github gitignore golang history httpie kubectl
 source $ZSH/oh-my-zsh.sh
 
 fpath+=($ZSH_CUSTOM/pure)
-autoload -U promptinit; promptinit
+autoload -U compinit promptinit; compinit; promptinit
 prompt pure
 
 # Paths

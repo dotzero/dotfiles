@@ -40,6 +40,7 @@ PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 [ -d $HOME/.composer/vendor/bin ] && _prepend_path "$HOME/.composer/vendor/bin"
 [ -d $HOME/.poetry/bin ] && _prepend_path "$HOME/.poetry/bin"
 [ -d $HOME/yandex-cloud/bin ] && _prepend_path "$HOME/yandex-cloud/bin"
+[ -d $HOME/.local/bin ] && _prepend_path "$HOME/.local/bin"
 export PATH
 
 # Homebrew

@@ -1,8 +1,4 @@
-alias docker-clean=' \
-  docker container prune -f ; \
-  docker image prune -f ; \
-  docker network prune -f ; \
-  docker volume prune -f '
+alias docker-clean='docker system prune -a --volumes -f'
 
 # Get container process
 alias dps="docker ps"

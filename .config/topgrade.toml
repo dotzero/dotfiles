@@ -4,6 +4,10 @@ only = ["brew_cask", "brew_formula", "git_repos", "shell"]
 cleanup = true
 skip_notify = true
 
+[brew]
+greedy_cask = true
+autoremove = true
+
 [git]
 repos = [
    "~/.0"

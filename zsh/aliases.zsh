@@ -1,4 +1,4 @@
-alias selfupdate="topgrade"
+alias selfupdate="topgrade -y"
 
 # Travelesting
 alias ..="cd .."

@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "home": {
+      "user.email": "mail@dotzero.ru",
+      "user.name": "dotzero"
+    },
+    "work": {
+      "user.email": "amsmagin@avito.ru",
+      "user.name": "Aleksandr Smagin"
+    }
+  }
+}
